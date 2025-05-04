@@ -41,6 +41,14 @@ public class Transaction {
     private String statusMessage;
     private boolean commisionWorthy;
     private BigDecimal commision;
+
     @NotBlank(message = "Account number is required")
-    private String accountNumber;
+    @Column(name = "from_account")
+    private String fromAccount;
+
+    @NotBlank(message = "Account number is required")
+    @Column(name = "to_account")
+    private String toAccount;
+
+
 }
